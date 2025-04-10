@@ -11,7 +11,7 @@ public class LteController : Controller {
         var db = client.GetDatabase("Inmuebles");
         var collection = db.GetCollection<Inmueble>("RentasVentas");
 
-        var Filtro = Builders<Inmueble>.Filter.Lte(x => x.MetrosConstruccion, 500);
+        var Filtro = Builders<Inmueble>.Filter.Lte(x => x.MetrosSSConstruccion, 500);
         var lista = collection.Find(Filtro).ToList();
         
         return Ok(lista);

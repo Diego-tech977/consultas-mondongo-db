@@ -53,7 +53,7 @@ public class NinController : Controller {
         return Ok(lista);
     }
 
-    [HttpGet("pisos-departamento")]
+    [HttpGet("D")]
     public IActionResult PisosDepartamento(){
         MongoClient client = new MongoClient (CadenasConexion.MONGO_DB);
         var db = client.GetDatabase("Inmuebles");
